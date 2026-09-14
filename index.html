@@ -118,6 +118,28 @@ body{background:#100611}
 @media(max-width:380px){.album .photo{height:245px}.album{gap:17px 9px}.btn{min-width:138px}.runzone{height:200px}}
 
 .poem{padding:12px 16px;margin:10px 0;border-left:3px solid rgba(255,120,180,.45);background:rgba(255,255,255,.05);border-radius:12px}.poem p{margin:0!important}
+
+/* Final page deluxe birthday animation */
+#p7 .card{isolation:isolate}
+#p7 .album-fx{z-index:1}
+#p7 .birthday-burst strong{animation:finalTitleIn 1.2s cubic-bezier(.2,.8,.2,1) both, titleGlow 2.5s ease-in-out 1.2s infinite alternate}
+#p7 .birthday-burst span:first-child{animation:miniFloat 2.8s ease-in-out infinite}
+#p7 .birthday-burst span:last-child{animation:miniFloat 3s ease-in-out .4s infinite}
+#p7 .album{position:relative;z-index:3}
+#p7 .photo{animation:photoIn .8s both, photoFloat 4.5s ease-in-out 1s infinite}
+#p7 .p-b{animation-delay:.15s,1.5s}.p-c{animation-delay:.25s,2s}.p-d{animation-delay:.35s,2.4s}.p-e{animation-delay:.45s,1.8s}.p-f{animation-delay:.55s,2.2s}
+#p7 .album-finale{position:relative;z-index:4;animation:finaleRise 1s .8s both}
+#p7 .album-finale strong{display:inline-block;animation:shineText 2.6s ease-in-out 1.8s infinite}
+#p7 .confetti-dots{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+#p7 .confetti-dots i{position:absolute;width:7px;height:12px;border-radius:3px;background:rgba(255,255,255,.8);animation:dotFall linear infinite;opacity:.7}
+@keyframes finalTitleIn{0%{opacity:0;transform:translateY(28px) scale(.85)}100%{opacity:1;transform:none}}
+@keyframes titleGlow{0%{text-shadow:0 8px 30px rgba(255,91,160,.28)}100%{text-shadow:0 8px 45px rgba(255,190,90,.72),0 0 25px rgba(255,120,190,.35)}}
+@keyframes miniFloat{50%{transform:translateY(-7px) rotate(-2deg)}100%{transform:none}}
+@keyframes photoFloat{0%,100%{margin-top:0}50%{margin-top:-7px}}
+@keyframes finaleRise{0%{opacity:0;transform:translateY(24px)}100%{opacity:1;transform:none}}
+@keyframes shineText{0%,100%{transform:translateY(0);text-shadow:none}50%{transform:translateY(-3px);text-shadow:0 0 18px rgba(255,215,130,.7)}}
+@keyframes dotFall{0%{transform:translateY(-30px) rotate(0);opacity:0}10%{opacity:.75}100%{transform:translateY(640px) rotate(500deg);opacity:0}}
+@media(max-width:600px){#p7 .album-card{padding:28px 10px 34px}.birthday-burst strong{font-size:clamp(40px,14vw,60px)}#p7 .album-finale{font-size:15px;line-height:1.7;padding:8px 10px}.photo{width:175px;height:215px}.album{min-height:505px}}
 </style></head>
 <body><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div>
 <section class="page active" id="p1"><div class="wrap"><h1 class="title">Aaj Kuchh Special hai kya <span class="emoji">🙄</span></h1><div class="runzone" id="z1"><button class="btn left" id="haan">Haan hai</button><button class="btn alt right" id="pata">Mujhe nhi pta</button></div></div></section>
@@ -132,7 +154,7 @@ body{background:#100611}
     <source src="birthday-intro.mp4" type="video/mp4">
   </video>
 </div>
-<button class="letter-close" id="closeLetter" aria-label="Close letter">×</button><div class="letter-content-reveal" id="letterContent"><h3>💌 Dear Dipika 💗</h3><div class="letter-scroll">
+<button class="letter-close" id="closeLetter" aria-label="Close letter">×</button><div class="letter-content-reveal" id="letterContent"><h3>💌 Dear Deepika 💗</h3><div class="letter-scroll">
 <p><b>Sabse pehle toh Happy Birthday! 🥳🎂</b></p>
 <p>Haan haan, pata hai… birthday tumhara hai aur drama main kar raha hoon. Lekin kya karun, tumhara birthday hai toh thoda special treatment toh banta hai. 😁</p>
 <p>Yahan tak pahuchne mein gussa toh aaya hoga. Kitna bhi gussa kar lo, aakhir meri baat maanke hi yahan tak pahunchi ho. 😎</p>
@@ -145,16 +167,17 @@ body{background:#100611}
 <p>Aur wish karne wala…<br><b>main hoon. 😌</b></p>
 <p>Toh zyada khush hone ki zarurat nahi hai, itna special birthday wish har kisi ko nahi milta. 😎</p>
 <p>Once again…</p>
-<p><b>Happy Birthday, Dipika! 🥳❤️</b></p>
+<p><b>Happy Birthday, Deepika! 🥳❤️</b></p>
 <p>Khush raho, mast raho, aur haan…<br>Aise hi mere aashirwad aur gyaan ki <b>chhatra-chhaya</b> mein apna dimaag viksit karte raho. 😊</p>
 <p><b>Neeche ek last gift hai, dekh kar zaroor jaana. 😁</b></p>
 <p class="sign">— Tumhe bilkul pareshan na karne wala dost 😇</p>
 <div class="gift-inside" id="giftInside"><div class="gift-box"><div class="gift-lid"></div><div class="gift-body"></div><div class="gift-ribbon-v"></div><div class="gift-ribbon-h"></div><span>🎁</span></div><small>Gift ke liye click karo</small></div>
 </div></div></div></div></div>
 <section class="page" id="p7"><div class="wrap"><div class="card album-card">
+<div class="confetti-dots" aria-hidden="true"><i style="left:0%;animation-delay:0.0s;animation-duration:3.6s"></i><i style="left:17%;animation-delay:0.25s;animation-duration:4.05s"></i><i style="left:34%;animation-delay:0.5s;animation-duration:4.5s"></i><i style="left:51%;animation-delay:0.75s;animation-duration:4.95s"></i><i style="left:68%;animation-delay:1.0s;animation-duration:5.4s"></i><i style="left:85%;animation-delay:1.25s;animation-duration:3.6s"></i><i style="left:5%;animation-delay:1.5s;animation-duration:4.05s"></i><i style="left:22%;animation-delay:1.75s;animation-duration:4.5s"></i><i style="left:39%;animation-delay:2.0s;animation-duration:4.95s"></i><i style="left:56%;animation-delay:0.0s;animation-duration:5.4s"></i><i style="left:73%;animation-delay:0.25s;animation-duration:3.6s"></i><i style="left:90%;animation-delay:0.5s;animation-duration:4.05s"></i><i style="left:10%;animation-delay:0.75s;animation-duration:4.5s"></i><i style="left:27%;animation-delay:1.0s;animation-duration:4.95s"></i><i style="left:44%;animation-delay:1.25s;animation-duration:5.4s"></i><i style="left:61%;animation-delay:1.5s;animation-duration:3.6s"></i><i style="left:78%;animation-delay:1.75s;animation-duration:4.05s"></i><i style="left:95%;animation-delay:2.0s;animation-duration:4.5s"></i></div>
 <div class="album-fx" aria-hidden="true"><span class="balloon">🎈</span><span class="balloon">🎈</span><span class="conf">🎉</span><span class="sparkle">✨</span><span class="balloon">🎈</span><span class="sparkle">💖</span><span class="conf">🎊</span><span class="sparkle">✨</span></div>
-<div class="birthday-burst"><span>🥳 A SPECIAL DAY FOR</span><strong>Happy Birthday</strong><span>Dipika! 🎂</span></div>
-<div class="album"><div class="photo p-a"><img src="dipika-01.jpg" alt="Dipika photo 1"></div><div class="photo p-b"><img src="dipika-02.jpg" alt="Dipika photo 2"></div><div class="photo p-c"><img src="dipika-03.jpg" alt="Dipika photo 3"></div><div class="photo p-d"><img src="dipika-04.jpg" alt="Dipika photo 4"></div><div class="photo p-e"><img src="dipika-05.jpg" alt="Dipika photo 5"></div><div class="photo p-f"><img src="dipika-06.jpg" alt="Dipika photo 6"></div></div>
+<div class="birthday-burst"><span>🥳 A SPECIAL DAY FOR</span><strong>Happy Birthday</strong><span>Deepika! 🎂</span></div>
+<div class="album"><div class="photo p-a"><img src="deepika-01.jpg" alt="Deepika photo 1"></div><div class="photo p-b"><img src="deepika-02.jpg" alt="Deepika photo 2"></div><div class="photo p-c"><img src="deepika-03.jpg" alt="Deepika photo 3"></div><div class="photo p-d"><img src="deepika-04.jpg" alt="Deepika photo 4"></div><div class="photo p-e"><img src="deepika-05.jpg" alt="Deepika photo 5"></div><div class="photo p-f"><img src="deepika-06.jpg" alt="Deepika photo 6"></div></div>
 <div class="album-finale">Aaj ka din tumhare naam 💖<br><strong>Stay happy, keep smiling & keep shining!</strong> ✨</div>
 </div></div></section>
 
@@ -178,10 +201,26 @@ function stopLastPageMusic(){
 const pages=[1,2,3,4,5,6,7].map(n=>document.getElementById('p'+n));
 function go(n){
   stopLastPageMusic();
-  stopSecondPageMusic();
-  stopPartyPageMusic();
-  if(n===2) startSecondPageMusic();
-  if(n===5) startPartyPageMusic();
+  // Page 2 → Page 4: keep the same music playing.
+  if(n===2) {
+    startSecondPageMusic();
+  } else if(n===3 || n===4) {
+    const m=document.getElementById('secondPageMusic');
+    if(m && m.paused) startSecondPageMusic();
+  } else {
+    stopSecondPageMusic();
+  }
+
+  // Page 5 → Page 6: keep party music playing until the letter is opened.
+  if(n===5) {
+    startPartyPageMusic();
+  } else if(n===6) {
+    const m=document.getElementById('partyPageMusic');
+    if(m && m.paused) startPartyPageMusic();
+  } else {
+    stopPartyPageMusic();
+  }
+
   if(n===7) startLastPageMusic();
   pages.forEach((p,i)=>p.classList.toggle('active',i===n-1));
 }
@@ -272,6 +311,8 @@ function revealLetterContent(){
 }
 openLetter.onclick=()=>{
   stopBirthdayMusic();
+  stopPartyPageMusic();
+  stopSecondPageMusic();
   resetLetterView();
   env.classList.add('opened');
   modal.classList.add('opening','open');
